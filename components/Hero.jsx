@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 export default function Hero() {
   return (
     <section className="bg-[#00aa5b] text-white pt-20 pb-28">
@@ -13,31 +11,20 @@ export default function Hero() {
             From rides and food delivery to logistics and payments. Gofast is the only app you need to navigate your day with ease.
           </p>
           
-          {/* Separated App Store and Google Play Images */}
-          <div className="flex flex-row justify-center md:justify-start gap-4 items-center">
-            
-            {/* App Store Image Button */}
-            <button className="hover:scale-105 transition-transform duration-200">
-              <Image 
-                src="/app-store.png" 
-                alt="Download on the App Store" 
-                width={150} 
-                height={50} 
-                className="h-[50px] w-auto object-contain rounded-xl shadow-lg bg-white" 
-              />
+          {/* Restored CSS-styled buttons (No PNGs needed!) */}
+          <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
+            <button className="bg-gray-900 text-white px-8 py-3.5 rounded-2xl font-bold flex items-center justify-center hover:bg-black transition-colors shadow-lg">
+              <svg className="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M17.5 14.5c0-2.5 2-4.5 4.5-4.5-.5-1.5-1.5-2.5-3-3.5-2-1.5-4-2-6-1.5-2-.5-4 0-6 1.5-1.5 1-2.5 2-3 3.5 2.5 0 4.5 2 4.5 4.5s-2 4.5-4.5 4.5c.5 1.5 1.5 2.5 3 3.5 2 1.5 4 2 6 1.5 2 .5 4 0 6-1.5 1.5-1 2.5-2 3-3.5-2.5 0-4.5-2-4.5-4.5z"/>
+              </svg>
+              App Store
             </button>
-
-            {/* Google Play Image Button */}
-            <button className="hover:scale-105 transition-transform duration-200">
-              <Image 
-                src="/google-play.jpg" 
-                alt="Get it on Google Play" 
-                width={160} 
-                height={50} 
-                className="h-[50px] w-auto object-contain rounded-xl shadow-lg" 
-              />
+            <button className="bg-white text-gray-900 px-8 py-3.5 rounded-2xl font-bold flex items-center justify-center hover:bg-gray-100 transition-colors shadow-lg">
+              <svg className="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M3 20.5v-17c0-.8.5-1.5 1.2-1.5.3 0 .7.1.9.3l15 8.5c.6.3.9 1 .6 1.6-.1.2-.3.4-.6.6l-15 8.5c-.3.2-.6.3-.9.3-.7 0-1.2-.5-1.2-1.3zm2-15v13l11.5-6.5L5 5.5z"/>
+              </svg>
+              Google Play
             </button>
-
           </div>
         </div>
 
